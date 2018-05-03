@@ -1,8 +1,16 @@
+#body{
+    background-color: blanchedalmond;
+    border: black;
+    
+}
+#crystal{
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+}
 
-    width: 50%;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: aquamarine;
-    margin: 10% auto;
-    text-align: center;
+#crystal{
+    border: 1px seagreen;
+    height: 200px;
+    width: 200px;
 }
