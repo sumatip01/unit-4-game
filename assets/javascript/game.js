@@ -1,42 +1,104 @@
 var random_result;
-var counter = 0;
 var wins;
 var loses;
+var previous =0;
 
+//$(".crystal").attr('class', 'red');
+
+var startGame = function() {
+
+//images
+    $(".crystals").empty();
+
+    var img = document.createElement("img")
+    img.src = "crystal1.jpg";
+    var src = document.getElementById("x");
+    src.appendChild(img);
+
+    var img = document.createElement("img")
+    img.src = "crystal2.jpg";
+    var src = document.getElementById("x");
+    src.appendChild(img);
+
+    var img = document.createElement("img")
+    img.src = "crystal3.jpg";
+    var src = document.getElementById("x");
+    src.appendChild(img);
+
+    var img = document.createElement("img")
+    img.src = "crystal4.jpg";
+    var src = document.getElementById("x");
+    src.appendChild(img);
+
+    
 random_result = Math.floor(Math.random() * 60) + 30;
 
-$("result").html('Random Result: ');
+
+$ ("#result").html('Random Result: ' + random_result);
+
 for (var i = 0; i < 4; i++){
 
     var randomNumber = Math.floor(Math.random() * 10) +1;
     
-
     var crystal = $("<div>");
         crystal.attr({
-            "class": 'crystal';
-            "data-random": randomNumber
-
+            "class": 'crystal'
+           data-random = "randomNumber"
         });
-    $(".crystals").append(crystal);
+        crystal.css({
+            "background-image":"url" + (image[1]) + "')",
+            "background-size":"cover"
+        });
+
+     $(".crystal").append(crystal);
+
+    }
+
 }
 
+startGame();
 
+var reset = function () {
 
-//while (Attempts != randomNumber) {
-  //  var Attempts = prompt("Try to match the number");
-    //counter += 1;
-
- //   if (counter > randomNumber) {
-   //     document.write ("That's too high!");
-   //     break
+}
+//event delegation
+$(document).on('click', ".crystal", function () {
     
-   // }
 
-   // if (Attempts == randomNumber) {
-     //   document.write ("You got it!");
+    var num = parseInt($(this).attr('data-random'));
+    
+    previous += num;
 
-//    }
-//}
+    $("#previous").html("Total score: ",previous);
+    
+
+    console.log(previous);
+
+    if(previous > random_result){
+        document.write("That's too high!");
+        lost--;
+
+        $("#lost").html(lost);
+
+        previous = 0;
+
+        startGame();
+
+    }
+    else if(previous === random_result){
+        document.write("You got it!");
+        win++;
+
+        $("#win").html(win);
+
+        previous = 0;
+
+        startGame();
+
+    }
+});
+
+
 
 
 // Display 4 Crystals, assign a random number to each Crystal that will be hidden and not displayed

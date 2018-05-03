@@ -1,7 +1,7 @@
 #body{
     background-color: blanchedalmond;
     border: black;
-    
+
 }
 #crystal{
     display: flex;
@@ -13,4 +13,16 @@
     border: 1px seagreen;
     height: 200px;
     width: 200px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#crystal:hover{
+    box-shadow: 15px, 15px, 15px, rgba(0, 0, 0, 0.5);
+    padding: 2px;
+    cursor: pointer;
+}
+
+#img{
+    width:50px;
 }
