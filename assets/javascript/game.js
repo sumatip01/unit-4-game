@@ -64,7 +64,7 @@ startGame();
 var reset = function () {
 
 }
-//event delegation
+
 $(document).on('click', ".crystal", function () {
     
 
