@@ -1,4 +1,4 @@
-#body{
+body{
     background-color: blanchedalmond;
     border: black;
 
@@ -7,9 +7,6 @@
     display: flex;
     justify-content: space-around;  
     align-items: center;
-}
-
-#crystal{
     border: 1px seagreen;
     height: 200px;
     width: 200px;

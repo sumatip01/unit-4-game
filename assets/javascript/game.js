@@ -3,32 +3,35 @@ var wins;
 var loses;
 var previous =0;
 
-//$(".crystal").attr('class', 'red');
 
 var startGame = function() {
 
 //images
     $(".crystals").empty();
 
-    var img = document.createElement("img")
-    img.src = "crystal1.jpg";
-    var src = document.getElementById("x");
-    src.appendChild(img);
+    var crystal1 = document.createElement("img")
+    crystal1.src = "./assets/images/crystal1.jpg";
+    //var src = document.getElementById("x");
+    //src.appendChild(crystal1);
+    document.getElementById("crystal1").appendChild(crystal1);
 
-    var img = document.createElement("img")
-    img.src = "crystal2.jpg";
-    var src = document.getElementById("x");
-    src.appendChild(img);
+    var crystal2 = document.createElement("img")
+    crystal2.src = "./assets/images/crystal2.jpg";
+    //var src = document.getElementById("x");
+    //src.appendChild(crystal2);
+    document.getElementById("crystal2").appendChild(crystal2);
 
-    var img = document.createElement("img")
-    img.src = "crystal3.jpg";
-    var src = document.getElementById("x");
-    src.appendChild(img);
+    var crystal3 = document.createElement("img")
+    crystal3.src = "./assets/images/crystal3.jpg";
+    //var src = document.getElementById("x");
+    //src.appendChild(crystal3);
+    document.getElementById("crystal3").appendChild(crystal3);
 
-    var img = document.createElement("img")
-    img.src = "crystal4.jpg";
-    var src = document.getElementById("x");
-    src.appendChild(img);
+    var crystal4 = document.createElement("img")
+    crystal4.src = "./assets/images/crystal4.jpg";
+    //var src = document.getElementById("x");
+    //src.appendChild(crystal4);
+    document.getElementById("crystal4").appendChild(crystal4);
 
     
 random_result = Math.floor(Math.random() * 60) + 30;
@@ -42,11 +45,11 @@ for (var i = 0; i < 4; i++){
     
     var crystal = $("<div>");
         crystal.attr({
-            "class": 'crystal'
-           data-random = "randomNumber"
+            "class": 'crystal',
+           "data-random": 'randomNumber'
         });
         crystal.css({
-            "background-image":"url" + (image[1]) + "')",
+           //"background-image":"url" + (image[1]) + ")",
             "background-size":"cover"
         });
 
